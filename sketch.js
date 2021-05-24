@@ -38,7 +38,7 @@ function draw() {
   background("skyblue");
 
  for (i= 1; i<logGroup1.length; i++){
-   if (logGroup1[i],x<0){
+   if (logGroup1[i].x<0){
      logGroup1[i].x= width;
    }
  }
@@ -47,7 +47,9 @@ function draw() {
   if (carGroup1[i].x<0){
     carGroup1[i].x= width;
   }
+  if (carGroup1[i].x>width){
+    carGroup1[i].x= 0;
+  }
 }
   drawSprites();
 }
-
